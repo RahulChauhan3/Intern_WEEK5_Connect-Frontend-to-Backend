@@ -1,0 +1,25 @@
+Week 5 API test execution record
+================================
+
+Suite size: 20 integration checks (18 original + 2 review checks).
+
+Attempted command:
+  npm test
+
+Result in this review environment:
+  BLOCKED before test execution: Node could not resolve the `dotenv` package.
+  Error: Cannot find module 'dotenv'
+
+Dependency installation was attempted for the frontend but timed out. No local MongoDB daemon is available in this environment. Consequently, no claim is made that the 20 integration checks passed here.
+
+Static verification:
+  All JavaScript source files in both supplied projects passed `node --check`.
+
+To complete the real integration run:
+  1. Run `npm install` in Source_Code (DB-to-API) or Source_Code/server (frontend bundle).
+  2. Start MongoDB and set MONGODB_URI in .env.
+  3. Run `npm test`.
+
+The two added cases are:
+  - GET /api/posts rejects an invalid status filter (400)
+  - PUT /api/posts/:id rejects an empty update body (400)

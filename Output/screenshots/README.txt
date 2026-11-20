@@ -1,0 +1,1 @@
+These six PNGs are illustrative UI mockups, not screenshots captured from a live React/Vite browser session. They were composed to match the supplied project stylesheet and page states. Replace with genuine captures after running the frontend and API locally before treating them as runtime evidence.
